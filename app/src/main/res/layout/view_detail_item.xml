@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/whiteSmoke"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/images"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCategory"
+        android:layout_width="match_parent"
+        android:text="@string/app_name"
+        android:textStyle="bold"
+        android:textSize="13dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@color/whiteSmoke"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thumbnail"
+        android:layout_height="wrap_content" />
+
+
+   <LinearLayout
+       android:id="@+id/llSize"
+       android:orientation="vertical"
+       android:layout_marginTop="5dp"
+       android:gravity="center"
+       app:layout_constraintTop_toBottomOf="@+id/tvCategory"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <android.support.v7.widget.RecyclerView
+           android:layout_width="wrap_content"
+           android:orientation="horizontal"
+           android:id="@+id/recyclerView"
+
+           android:layout_height="wrap_content">
+
+       </android.support.v7.widget.RecyclerView>
+
+   </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
